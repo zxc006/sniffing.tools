@@ -20,7 +20,7 @@ var mutex sync.Mutex
 func New() (*ChromeDp, error) {
 	// 如果浏览器数量大于最大数量，等待
 	if len(Servers) >= config.Config.XcMax {
-		if config.Config.XcOut == 1 {
+		if config.Config.XcOut == 6 {
 			return nil, fmt.Errorf("超出最大浏览器数量")
 		}
 		for len(Servers) >= config.Config.XcMax {
